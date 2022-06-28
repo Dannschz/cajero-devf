@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="notification"></p>
+    <header class="header">
+      <h1 class="headerTitle">Mi Banca</h1>
+      <div class="nameAndLogout" id="nameAndLogout">
+        <p class="clientName" id="clientName"></p>
+        <button class="logoutButton" id="logoutButton">Cerrar sesión</button>
+      </div>
+    </header>
+    <div id="divLogin" class="divLogin">
+      <div class="titleC">
+        <h4 class="loginTitle">Hola! nos da gusto verte de nuevo.</h4>
+        <p class="titleD">Inicia sesión para acceder a tu banca digital</p>
+      </div>
+      <input type="email" id="email" placeholder="email" />
+      <span class="loginError" id="error"></span>
+      <input type="password" id="password" placeholder="password" />
+      <button class="loginButton" id="loginButton">Entrar</button>
+    </div>
+
+    <div id="Banca" class="bancaOculta">
+      <h1 id="welcome">Bienvenid@ a tu banca en linea</h1>
+      <p class="bancaD" id="bancaD">¿Que operación deseas realizar?</p>
+      <ul class="bancaOP" id="bancaOP">
+        <li><button id="deposito">Deposito</button></li>
+        <li><button id="retiro">Retiro</button></li>
+        <li><button id="saldo">Consulta de salgo</button></li>
+      </ul>
+      <div class="depositoOculto" id="depositoOculto">
+        <h4 class="depoTitle">Operación seleccionada: Deposito</h4>
+        <label for="deposito">
+          <span class="depoText">Ingrese la cantidad a depositar</span>
+          <input
+            type="number"
+            name="deposito"
+            id="depositoInput"
+            placeholder="0.00"
+            min="0"
+          />
+        </label>
+        <div class="buttonActions">
+          <button class="depositoButton" id="depoBtn">Depositar</button>
+          <button class="depositoButton cancelButton" id="cancelBtn">
+            Regresar
+          </button>
+        </div>
+      </div>
+      <div class="retiroOculto" id="retiroOculto">
+        <h4 class="depoTitle">Operación seleccionada: Retiro</h4>
+        <label for="retiro">
+          <span class="depoText">Ingrese la cantidad a Retirar</span>
+          <input
+            type="number"
+            name="retiro"
+            id="retiroInput"
+            placeholder="0.00"
+            min="0"
+          />
+        </label>
+        <div class="buttonActions">
+          <button class="retiroButton" id="retiroBtn">Retirar</button>
+          <button class="retiroButton cancelButton" id="backBtn">
+            Regresar
+          </button>
+        </div>
+      </div>
+      <div class="saldoOculto" id="saldoOculto">
+        <h4 class="depoTitle">Operación seleccionada: Consulta de saldo</h4>
+        <h4 id="saldoTitle" class="saldoTitle"></h4>
+        <button class="retiroButton cancelButton" id="saldoBack">Regresar</button>
+      </div>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
